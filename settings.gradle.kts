@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "ZipTap"
 include(":app")
 include(":core")
+include(":compose-ui")

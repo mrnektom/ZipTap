@@ -26,6 +26,10 @@ kotlin {
         }
     }
 
+    jvm()
+
+    wasmJs { browser() }
+
     // For iOS targets, this is also where you should
     // configure native binary output. For more information, see:
     // https://kotlinlang.org/docs/multiplatform-build-native-binaries.html#build-xcframeworks
@@ -33,25 +37,25 @@ kotlin {
     // A step-by-step guide on how to include this library in an XCode
     // project can be found here:
     // https://developer.android.com/kotlin/multiplatform/migrate
-    val xcfName = "coreKit"
-
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
+//    val xcfName = "coreKit"
+//
+//    iosX64 {
+//        binaries.framework {
+//            baseName = xcfName
+//        }
+//    }
+//
+//    iosArm64 {
+//        binaries.framework {
+//            baseName = xcfName
+//        }
+//    }
+//
+//    iosSimulatorArm64 {
+//        binaries.framework {
+//            baseName = xcfName
+//        }
+//    }
 
     // Source set declarations.
     // Declaring a target automatically creates a source set with the same name. By default, the
@@ -87,16 +91,16 @@ kotlin {
                 implementation(libs.androidx.junit)
             }
         }
-
-        iosMain {
-            dependencies {
-                // Add iOS-specific dependencies here. This a source set created by Kotlin Gradle
-                // Plugin (KGP) that each specific iOS target (e.g., iosX64) depends on as
-                // part of KMP’s default source set hierarchy. Note that this source set depends
-                // on common by default and will correctly pull the iOS artifacts of any
-                // KMP dependencies declared in commonMain.
-            }
-        }
+//
+//        iosMain {
+//            dependencies {
+//                // Add iOS-specific dependencies here. This a source set created by Kotlin Gradle
+//                // Plugin (KGP) that each specific iOS target (e.g., iosX64) depends on as
+//                // part of KMP’s default source set hierarchy. Note that this source set depends
+//                // on common by default and will correctly pull the iOS artifacts of any
+//                // KMP dependencies declared in commonMain.
+//            }
+//        }
     }
 
 }
